@@ -36,9 +36,16 @@ public class LoginPageFunctionality extends CommonMethods{
 	
 	// ---------------Nagative Test Empty Password----------
 	
-	@Then("User should be able to see {string} message")
-	public void user_should_be_able_to_see_message(String msg) {
+	@Then("User should be able to see {string} message for password")
+	public void user_should_be_able_to_see_message_for_password(String msg) {
 		String actualTxtMsg = loginPageElements.txtPasswordErrorElement.getText();
+		Assert.assertEquals("Password error massage does NOT match!!!", msg, actualTxtMsg);
+	}
+	
+	
+	@Then("User should be able to see {string} message for username")
+	public void user_should_be_able_to_see_message_for_username(String msg) {
+		String actualTxtMsg = loginPageElements.txtUsernameErrorElement.getText();
 		Assert.assertEquals("Password error massage does NOT match!!!", msg, actualTxtMsg);
 	}
 
