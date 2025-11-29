@@ -9,6 +9,8 @@ import io.cucumber.java.en.When;
 
 public class LoginPageFunctionality extends CommonMethods{
 
+	//-------------Positive Test-------------------
+	
 	@When("I should able to navigate {string}")
 	public void i_should_able_to_navigate(String link) {
 		System.out.println("Link" + link);
@@ -30,7 +32,15 @@ public class LoginPageFunctionality extends CommonMethods{
 		waitForVisibility(loginPageElements.accountNamElement);
 		String accountName = loginPageElements.accountNamElement.getText();
 		Assert.assertEquals("Account name does NOT natch", "Jacqueline White", accountName);
-		wait(3);
 	}
+	
+	// ---------------Nagative Test Empty Password----------
+	
+	@Then("User should be able to see {string} message")
+	public void user_should_be_able_to_see_message(String msg) {
+		String actualTxtMsg = loginPageElements.txtPasswordErrorElement.getText();
+		Assert.assertEquals("Password error massage does NOT match!!!", msg, actualTxtMsg);
+	}
+
 	
 }
