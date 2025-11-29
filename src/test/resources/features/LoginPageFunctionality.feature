@@ -11,9 +11,16 @@ Feature: Login fonctionality
 	
 	
 	@login @regression 
-	Scenario: Empty password 
+	Scenario: Nagative Test Empty password 
 	When I should able to navigate 'https://hrm.neotechacademy.com/'
 	And Enter Admin Credential 'Admin' ''
 	And Click Login button
-	Then User should be able to see 'Password cannot be empty' message
+	Then User should be able to see 'Password cannot be empty' message for password
+	
+	@login @regression 
+	Scenario: Nagative Test Empty username 
+	When I should able to navigate 'https://hrm.neotechacademy.com/'
+	And Enter Admin Credential '' 'Neotech@123'
+	And Click Login button
+	Then User should be able to see 'Username cannot be empty' message for username
 	
