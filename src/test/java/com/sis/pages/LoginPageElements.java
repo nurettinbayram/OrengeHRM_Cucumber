@@ -21,6 +21,9 @@ public class LoginPageElements {
 	@FindBy(id = "account-name")
 	public WebElement accountNamElement;
 	
+	@FindBy(id = "txtPassword-error")
+	public WebElement txtPasswordErrorElement;
+	
 	public LoginPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
