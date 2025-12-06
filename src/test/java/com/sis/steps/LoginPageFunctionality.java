@@ -3,6 +3,7 @@ package com.sis.steps;
 import org.junit.Assert;
 
 import com.sis.utils.CommonMethods;
+import com.sis.utils.ConfigsReader;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -47,6 +48,15 @@ public class LoginPageFunctionality extends CommonMethods{
 	public void user_should_be_able_to_see_message_for_username(String msg) {
 		String actualTxtMsg = loginPageElements.txtUsernameErrorElement.getText();
 		Assert.assertEquals("Password error massage does NOT match!!!", msg, actualTxtMsg);
+	}
+	
+	
+	// -------------------LOGIN--------------------------
+
+	public static void loginFunction() {
+		sendText(loginPageElements.usernamElement, ConfigsReader.getProperty("username"));
+		sendText(loginPageElements.passwordElement, ConfigsReader.getProperty("password"));
+		click(loginPageElements.loginButtonElement);
 	}
 
 	
