@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 		// we may set monochrome to true for better readability in the console
 		monochrome = true, // if true, it will not print the console output in color
 
-		tags = "@login", // we can specify tags to run specific tests
+		tags = "@regression", // we can specify tags to run specific tests
 
 		plugin = { "pretty", // prints the console output in a readable format
 				"html:target/html-report/report.html", // generates an HTML report
