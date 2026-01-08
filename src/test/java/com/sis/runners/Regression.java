@@ -8,7 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		// we may specify the path to the feature files
-		features = "src/test/resources/features/", // path to the feature files
+		features = {
+				"src/test/resources/features/runLater" // last run
+		},
 
 		// we may specify the path to the step definitions
 		glue = "com.sis.steps", // path to the step definitions
@@ -22,13 +24,13 @@ import io.cucumber.junit.CucumberOptions;
 		tags = "@regression", // we can specify tags to run specific tests
 
 		plugin = { "pretty", // prints the console output in a readable format
-				"html:target/html-report/report.html", // generates an HTML report
-				"json:target/cucumber.json", // generates a JSON report
-				"rerun:target/failed.txt" // generates a rerun file for failed tests
+				"html:target/html-report/regression.html", // generates an HTML report
+				"json:target/regression.json", // generates a JSON report
+				"rerun:target/regression.txt" // generates a rerun file for failed tests
 		}
 
 )
 
-public class TestRunner {
+public class Regression {
 
 }

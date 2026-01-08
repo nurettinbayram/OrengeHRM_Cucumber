@@ -17,6 +17,9 @@ public class DashbordPageElements {
 	@FindBy(xpath = "//span[text()='Add Employee']")
 	public WebElement addEmployeeElement;
 	
+	@FindBy(xpath = "//span[text()='Employee List']")
+	public WebElement employeeListElement;
+	
 	
 	
 	public DashbordPageElements() {
