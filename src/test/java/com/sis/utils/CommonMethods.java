@@ -22,6 +22,51 @@ import com.google.common.io.Files;
 import com.sis.testbase.PageInitializer;
 
 public class CommonMethods extends PageInitializer {
+	
+	//------------------NEW METHODS-----------------------
+	/**
+	 * Click calendar icon
+	 * 
+	 * @param day
+	 * @param month
+	 * @param year
+	 */
+	public static void setCalendar(String day, String month, String year, List<WebElement> daysList, WebElement monthElmnt, WebElement yearElmt) {
+		selectUnVisibleDropdown(yearElmt, year);
+		selectUnVisibleDropdown(monthElmnt, month);
+		selectCalendarDate(daysList, day);
+	}
+	
+	public static void selectUnVisibleDropdown(WebElement element, String visibleText) {
+		becomeElementVisible(element);
+		try {
+			Select sl = new Select(element);
+			sl.selectByVisibleText(visibleText);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Asagidaki gibi burumlarda bu method kullanilabilir:
+	 * -->WaitForVisibilitiy() methodu ile bekleme eklendigi halde gorunmeyen element devaminda da TimeoutException firlatan
+	 * -->ElementNotInteractableException element ile etkilesime gecilmedigi durumda.
+	 * 
+	 * @param element
+	 */
+	public static void becomeElementVisible(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript("arguments[0].style.display = 'block';", element); 
+
+	}
+	
+	
+	
+	
+	
+	
+	//-----------------------------------------------------
 
 	/**
 	 * This method clears the text of a web element and sends the text parameter to
@@ -43,6 +88,19 @@ public class CommonMethods extends PageInitializer {
 	public static void wait(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * This method pauses the execution for a certain amount of time:  x * 100 
+	 * 
+	 * @param x
+	 */
+	public static void waitMiliSec(int x) {
+		try {
+			Thread.sleep(x * 100);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -75,6 +133,15 @@ public class CommonMethods extends PageInitializer {
 		try {
 			Select sl = new Select(element);
 			sl.selectByVisibleText(visibleText);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void selectDropdownByValue(WebElement element, String valuString) {
+		try {
+			Select sl = new Select(element);
+			sl.selectByValue(valuString);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
