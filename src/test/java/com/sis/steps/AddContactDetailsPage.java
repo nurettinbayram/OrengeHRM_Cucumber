@@ -1,6 +1,7 @@
 package com.sis.steps;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 import com.sis.utils.CommonMethods;
 
@@ -36,9 +37,9 @@ public class AddContactDetailsPage extends CommonMethods{
 	}
 	@When("Admin should click save button in contact details page")
 	public void admin_should_click_save_button_in_contact_details_page() {
-	    waitForClickability(addContactDetailsPageElements.saveButtonElement);
-	    jsClick(addContactDetailsPageElements.saveButtonElement);
-	    System.out.println("click");
+		WebElement btnElement = (addContactDetailsPageElements.saveButtonElement);
+	    waitForClickability(btnElement).click();;
+	    
 	}
 	@Then("Admin should able to see Successfully Updated pup up message")
 	public void admin_should_able_to_see_successfully_updated_pup_up_message() {

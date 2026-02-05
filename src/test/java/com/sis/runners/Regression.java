@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		// we may specify the path to the feature files
 		features = {
-				"src/test/resources/features/runLater" // last run
+				"src/test/resources/features" // last run
 		},
 
 		// we may specify the path to the step definitions
