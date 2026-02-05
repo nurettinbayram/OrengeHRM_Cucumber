@@ -1,7 +1,10 @@
 package com.sis.testbase;
 
 import com.sis.pages.AddContactDetailsPageElements;
+import com.sis.pages.AddDependencyPageElements;
+import com.sis.pages.AddEmergencyContactsPageElements;
 import com.sis.pages.AddEmployeePageElements;
+import com.sis.pages.AddSocialMediaDetailsPage;
 import com.sis.pages.DashbordPageElements;
 import com.sis.pages.EmployeeListPageElements;
 import com.sis.pages.LoginPageElements;
@@ -15,6 +18,9 @@ public class PageInitializer extends BaseClass {
 	public static PersonalDetailsPageElements personalDetailsPageElements;
 	public static EmployeeListPageElements employeeListPageElements;
 	public static AddContactDetailsPageElements addContactDetailsPageElements;
+	public static AddSocialMediaDetailsPage addSocialMediaDetailsPage;
+	public static AddEmergencyContactsPageElements addEmergencyContactsPageElements;
+	public static AddDependencyPageElements addDependencyPageElements;
 	
 	
 	
@@ -26,6 +32,9 @@ public class PageInitializer extends BaseClass {
 		personalDetailsPageElements = new PersonalDetailsPageElements();
 		employeeListPageElements = new EmployeeListPageElements();
 		addContactDetailsPageElements = new AddContactDetailsPageElements();
+		addSocialMediaDetailsPage = new AddSocialMediaDetailsPage();
+		addEmergencyContactsPageElements = new AddEmergencyContactsPageElements();
+		addDependencyPageElements = new AddDependencyPageElements();
 		
 	}
 

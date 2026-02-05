@@ -78,12 +78,26 @@ public class PersonalDetailsPageElements {
 	@FindBy(css = ".toast-message")
 	public WebElement successPopUpElement;
 	
-
+	//---------------More-----------------
+	
 	@FindBy(id = "top-menu-trigger")
 	public WebElement moreLinkElement;
 	
 	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Contact Details']")
 	public WebElement contactDetailsLinkElement;
+	
+	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Social Media Details']")
+	public WebElement socialMediaDetailsElement;
+	
+	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Emergency Contacts']")
+	public WebElement emergencyContactsElement;
+	
+	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Dependents']")
+	public WebElement dependentsLink;
+	
+	
+	
+	
 	
 	
 	

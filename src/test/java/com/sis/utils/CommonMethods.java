@@ -38,7 +38,7 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	public static void selectUnVisibleDropdown(WebElement element, String visibleText) {
-		becomeElementVisible(element);
+		elementBecomeVisibleByJS(element);
 		try {
 			Select sl = new Select(element);
 			sl.selectByVisibleText(visibleText);
@@ -54,17 +54,34 @@ public class CommonMethods extends PageInitializer {
 	 * 
 	 * @param element
 	 */
-	public static void becomeElementVisible(WebElement element) {
+	public static void elementBecomeVisibleByJS(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].style.display = 'block';", element); 
 
 	}
 	
+	//------------------------------Explicit Wait---------------------------------------
 	
+	public static void explicitWaitForElementVisibility(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
 	
+	public static void explicitWaitForElementToBeClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
 	
+	public static void explicitWaitForElementToBeSelected(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.elementToBeSelected(element));
+	}
 	
+	public static void explicitWaitForAlertIsPresent() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.alertIsPresent());
+	}
 	
 	//-----------------------------------------------------
 
