@@ -4,6 +4,7 @@ import com.sis.pages.AddContactDetailsPageElements;
 import com.sis.pages.AddDependencyPageElements;
 import com.sis.pages.AddEmergencyContactsPageElements;
 import com.sis.pages.AddEmployeePageElements;
+import com.sis.pages.AddImmigrationDetailsPageElement;
 import com.sis.pages.AddSocialMediaDetailsPage;
 import com.sis.pages.DashbordPageElements;
 import com.sis.pages.EmployeeListPageElements;
@@ -21,6 +22,7 @@ public class PageInitializer extends BaseClass {
 	public static AddSocialMediaDetailsPage addSocialMediaDetailsPage;
 	public static AddEmergencyContactsPageElements addEmergencyContactsPageElements;
 	public static AddDependencyPageElements addDependencyPageElements;
+	public static AddImmigrationDetailsPageElement addImmigrationDetailsPageElement;
 	
 	
 	
@@ -35,6 +37,7 @@ public class PageInitializer extends BaseClass {
 		addSocialMediaDetailsPage = new AddSocialMediaDetailsPage();
 		addEmergencyContactsPageElements = new AddEmergencyContactsPageElements();
 		addDependencyPageElements = new AddDependencyPageElements();
+		addImmigrationDetailsPageElement = new AddImmigrationDetailsPageElement();
 		
 	}
 

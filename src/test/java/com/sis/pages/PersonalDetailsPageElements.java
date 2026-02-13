@@ -95,6 +95,9 @@ public class PersonalDetailsPageElements {
 	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Dependents']")
 	public WebElement dependentsLink;
 	
+	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Immigration']")
+	public WebElement immigrationLink;
+	
 	
 	
 	
