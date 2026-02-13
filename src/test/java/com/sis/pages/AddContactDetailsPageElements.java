@@ -12,14 +12,23 @@ public class AddContactDetailsPageElements {
 	@FindBy(id = "street1")
 	public WebElement addressStreat1Element;
 	
+	@FindBy(id = "street2")
+	public WebElement addressStreat2Element;
+	
 	@FindBy(id = "city")
 	public WebElement cityElement;
 	
 	@FindBy(id = "emp_zipcode")
 	public WebElement zipCodeElement;
 	
+	@FindBy(id = "emp_hm_telephone")
+	public WebElement homePhoneElement;
+	
 	@FindBy(id = "emp_mobile")
 	public WebElement mobilePhoneElement;
+	
+	@FindBy(id = "emp_work_telephone")
+	public WebElement workPhoneElement;
 	
 	@FindBy(id = "emp_work_email")
 	public WebElement workEmailElement;
