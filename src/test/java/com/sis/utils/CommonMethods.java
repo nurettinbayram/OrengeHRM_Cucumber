@@ -117,7 +117,7 @@ public class CommonMethods extends PageInitializer {
 	 */
 	public static void waitMiliSec(int x) {
 		try {
-			Thread.sleep(x * 100);
+			Thread.sleep(x);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

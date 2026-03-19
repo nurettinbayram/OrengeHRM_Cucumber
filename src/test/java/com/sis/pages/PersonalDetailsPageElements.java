@@ -98,6 +98,12 @@ public class PersonalDetailsPageElements {
 	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Immigration']")
 	public WebElement immigrationLink;
 	
+	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Work Week']")
+	public WebElement workWeek;
+	
+	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Report-to']")
+	public WebElement reportTo;
+	
 	
 	
 	

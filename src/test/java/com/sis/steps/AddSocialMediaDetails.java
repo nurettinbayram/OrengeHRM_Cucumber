@@ -60,7 +60,8 @@ public class AddSocialMediaDetails extends CommonMethods{
 	}
 	@Then("It should show Should be a valid url message")
 	public void it_should_show_should_be_a_valid_url_message() {
-		Assert.assertTrue("Url invalid message does NOT Appear!!", addSocialMediaDetailsPage.invalidUrlElement.isDisplayed());
+		WebElement urlElement = waitForVisibility(addSocialMediaDetailsPage.invalidUrlElement);
+		Assert.assertTrue("Url invalid message does NOT Appear!!", urlElement.isDisplayed());
 	}
 
 
