@@ -28,24 +28,26 @@ public class AddContactDetailsPage extends CommonMethods {
 
 	@When("Admin should fill out contact details")
 	public void admin_should_fill_out_contact_details() {
-		sendText(addContactDetailsPageElements.addressStreat1Element, "5 Cucumber St.");
-		sendText(addContactDetailsPageElements.addressStreat2Element, "5 Cucumber St.");
-		sendText(addContactDetailsPageElements.cityElement, "NYC");
-		selectUnVisibleDropdown(addContactDetailsPageElements.countryDropdownElement, "United States");
-		selectUnVisibleDropdown(addContactDetailsPageElements.stateProvincDropdownElement, "New York");
+		sendText(addContactDetailsPageElements.addressStreat1Element, "5 Cucumber");
+		sendText(addContactDetailsPageElements.addressStreat2Element, "5 Selenium");
+		sendText(addContactDetailsPageElements.cityElement, "New York City");
+		click(addContactDetailsPageElements.countryInputElement);
+		click(addContactDetailsPageElements.countryElement);
+		click(addContactDetailsPageElements.stateInputElement);
+		click(addContactDetailsPageElements.stateElement);
 		sendText(addContactDetailsPageElements.zipCodeElement, "11713");
-		sendText(addContactDetailsPageElements.mobilePhoneElement, "222 333 66 99");
+		sendText(addContactDetailsPageElements.mobilePhoneElement, "111 333 66 99");
 		sendText(addContactDetailsPageElements.workPhoneElement, "222 333 66 99");
-		sendText(addContactDetailsPageElements.homePhoneElement, "222 333 66 99");
-		sendText(addContactDetailsPageElements.workEmailElement, "nino@gmail.com");
-		sendText(addContactDetailsPageElements.otherEmailElement, "nino@gmail.com");
+		sendText(addContactDetailsPageElements.homePhoneElement, "333 333 66 99");
+		sendText(addContactDetailsPageElements.workEmailElement, "ninoo@gmail.com");
+		sendText(addContactDetailsPageElements.otherEmailElement, "nintoooo@gmail.com");
 
 	}
 
 	@When("Admin should click save button in contact details page")
 	public void admin_should_click_save_button_in_contact_details_page() {
-		WebElement btnElement = (addContactDetailsPageElements.saveButtonElement);
-		jsClick(waitForClickability(waitForVisibility(btnElement)));
+		WebElement btnElement = (waitForClickability(waitForVisibility(addContactDetailsPageElements.saveButtonElement)));
+		btnElement.click();
 
 	}
 

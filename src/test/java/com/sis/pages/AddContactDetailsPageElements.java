@@ -36,16 +36,22 @@ public class AddContactDetailsPageElements {
 	@FindBy(id = "emp_oth_email")
 	public WebElement otherEmailElement;
 	
-	@FindBy(id = "country")
-	public WebElement countryDropdownElement;
+	@FindBy(xpath = "//form[@name='contact.contactDetailsForm']//div[@id='country_inputfileddiv']")
+	public WebElement countryInputElement;
 	
-	@FindBy(id = "province")
-	public WebElement stateProvincDropdownElement;
+	@FindBy(xpath =  "//form[@name='contact.contactDetailsForm']//div[@id='country_inputfileddiv']//ul/li/span[text()='United States']")
+	public WebElement countryElement;
+	
+	@FindBy(xpath = "//form[@name='contact.contactDetailsForm']//div[@id='province_inputfileddiv']")
+	public WebElement stateInputElement;
+	
+	@FindBy(xpath = "//form[@name='contact.contactDetailsForm']//div[@id='province_inputfileddiv']//ul/li/span[text()='New York']")
+	public WebElement stateElement;
 	
 	@FindBy(id = "modal-save-button")
 	public WebElement saveButtonElement;
 	
-	@FindBy(id = "toast-container")
+	@FindBy(xpath = "//div[text()='Successfully Saved']")
 	public WebElement pupUpMsgElement;
 	
 
