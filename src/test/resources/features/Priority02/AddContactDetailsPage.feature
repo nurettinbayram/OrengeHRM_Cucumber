@@ -1,10 +1,10 @@
 
-
+@regression
 Feature: Add Employee Contact Details
 	
 
 	
-	@AddContactDetails @regression
+	@AddContactDetails 
   	Scenario: As an admin I should be able to change an employee contact details
   	Given Login with Admin credential
   	And Navigate to PIM and Employee List page

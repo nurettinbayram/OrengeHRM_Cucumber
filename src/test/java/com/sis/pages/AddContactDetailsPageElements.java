@@ -51,7 +51,7 @@ public class AddContactDetailsPageElements {
 	@FindBy(id = "modal-save-button")
 	public WebElement saveButtonElement;
 	
-	@FindBy(xpath = "//div[text()='Successfully Saved']")
+	@FindBy(xpath = "//div[text()='Successfully Updated']")
 	public WebElement pupUpMsgElement;
 	
 

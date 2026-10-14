@@ -11,6 +11,10 @@ public class Hooks extends CommonMethods {
 	@Before
 	public void start() {
 		setUp();
+		
+		//THIS TWO LINE ADDED BECOUSE OF THA HTTPS CONNECTION
+		click(loginPageElements.warningAdvanceBtnElement);
+		click(loginPageElements.warningProceedLinkElement);
 	}
 
 	@After

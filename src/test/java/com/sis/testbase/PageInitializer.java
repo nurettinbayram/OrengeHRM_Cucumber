@@ -12,6 +12,7 @@ import com.sis.pages.DashbordPageElements;
 import com.sis.pages.EmployeeListPageElements;
 import com.sis.pages.LoginPageElements;
 import com.sis.pages.PersonalDetailsPageElements;
+import com.sis.pages.AddQualificationsPageElements;
 
 public class PageInitializer extends BaseClass {
 
@@ -27,6 +28,7 @@ public class PageInitializer extends BaseClass {
 	public static AddImmigrationDetailsPageElement addImmigrationDetailsPageElement;
 	public static AddWorkWeekDetailsPageElements addWorkWeekDetailsPageElements;
 	public static AddReportToDetailsPageElements addReportToDetailsPageElements;
+	public static AddQualificationsPageElements addQualificationsPageElements;
 	
 	
 	
@@ -44,6 +46,7 @@ public class PageInitializer extends BaseClass {
 		addImmigrationDetailsPageElement = new AddImmigrationDetailsPageElement();
 		addWorkWeekDetailsPageElements = new AddWorkWeekDetailsPageElements();
 		addReportToDetailsPageElements = new AddReportToDetailsPageElements();
+		addQualificationsPageElements = new AddQualificationsPageElements();
 		
 	}
 

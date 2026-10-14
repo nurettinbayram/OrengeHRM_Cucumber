@@ -19,7 +19,9 @@ import io.cucumber.junit.CucumberOptions;
 		// we may set monochrome to true for better readability in the console
 		monochrome = true, // if true, it will not print the console output in color
 
-		tags = "@AddReportTo", // we can specify tags to run specific tests
+		// IF WE DON'T SET tags PROPERTY, THE RUNNER WILL EXEQUTE EVERY FEATURES FILE.
+		// IT WILL HELP WHEN WE RUN TEST WITH DRYRUN=TRUE PROPERTY IT WILL GIVE US EVERY UN IMPLEMENTED METHODS.
+		//tags = "@addQualifications", // we can specify tags to run specific tests
 
 		plugin = { // "pretty", // prints the console output in a readable format
 				"html:target/html-report/regression.html", // generates an HTML report

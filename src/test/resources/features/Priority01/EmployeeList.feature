@@ -1,4 +1,4 @@
-
+@regression 
 Feature: Employee List Validation
 	
 	Background:
@@ -7,7 +7,7 @@ Feature: Employee List Validation
 	When Navigate to PIM and Employee List page
 	Then User should be see list of employees 
 	
-	@employeeList @regression 
+	@employeeList 
 	Scenario: Validate list of employee
 	And User should see fifty rows of list by defaults
 	And User should be see that coloumn name
@@ -21,13 +21,13 @@ Feature: Employee List Validation
 	|Location			|
 	|Supervisor			|
 	
-	@employeeList @regression
+	@employeeList 
 	Scenario: User should able to search an employee by employee name
 	And Enter Employee Name to input 
 	And Click seach button 
 	And Should see employee in filter list
 	
-	@employeeList @regression 
+	@employeeList 
 	Scenario: Click employee name to navigate amployee details page
 	And Enter Employee Name to input 
 	And Click seach button 

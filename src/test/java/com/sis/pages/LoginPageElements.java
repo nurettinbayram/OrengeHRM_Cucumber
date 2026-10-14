@@ -27,6 +27,12 @@ public class LoginPageElements {
 	@FindBy(id = "txtUsername-error")
 	public WebElement txtUsernameErrorElement;
 	
+	@FindBy(id = "details-button")
+	public WebElement warningAdvanceBtnElement;
+	
+	@FindBy(id = "proceed-link")
+	public WebElement warningProceedLinkElement;
+	
 	public LoginPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
