@@ -54,6 +54,7 @@ public class LoginPageFunctionality extends CommonMethods{
 	// -------------------LOGIN--------------------------
 
 	public static void loginFunction() {
+		
 		sendText(loginPageElements.usernamElement, ConfigsReader.getProperty("username"));
 		sendText(loginPageElements.passwordElement, ConfigsReader.getProperty("password"));
 		click(loginPageElements.loginButtonElement);

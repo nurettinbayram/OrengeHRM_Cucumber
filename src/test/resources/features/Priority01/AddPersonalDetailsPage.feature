@@ -1,8 +1,8 @@
-
+@regression 
 Feature: Add Personal Details Page
 	
 	
-	@addPersonalDetail @regression 
+	@addPersonalDetail 
 	Scenario:  The admin user should be able to add personal details
 	Given Login with Admin credential
 	And Navigate to PIM and Employee List page

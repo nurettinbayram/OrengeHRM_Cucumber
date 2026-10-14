@@ -48,7 +48,7 @@ public class CommonMethods extends PageInitializer {
 	}
 	
 	/**
-	 * Asagidaki gibi burumlarda bu method kullanilabilir:
+	 * Asagidaki gibi durumlarda bu method kullanilabilir:
 	 * -->WaitForVisibilitiy() methodu ile bekleme eklendigi halde gorunmeyen element devaminda da TimeoutException firlatan
 	 * -->ElementNotInteractableException element ile etkilesime gecilmedigi durumda.
 	 * 

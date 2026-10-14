@@ -1,5 +1,5 @@
 
-
+@regression
 Feature: Add Social Media Details 
 	
 	Background:
@@ -16,7 +16,7 @@ Feature: Add Social Media Details
   	And Click on PLUS button right corner
   	And Admin able to see Add Social Media Pup up page
   	
-  	@AddSocialMedia @regression
+  	@AddSocialMedia 
 	Scenario: As an admin I should be able to add an employee social media details
   	And Fill out Add Social Media inputs 
   	And Click save button Add Social Media
@@ -24,7 +24,7 @@ Feature: Add Social Media Details
   	And Entered information should be displayed on the Social Media table
   	
   	
-  	@AddSocialMedia @regression
+  	@AddSocialMedia 
   	Scenario: Upon entering invalid Link user should see an error message Should be a valid url
   	And Fill out Add Social Media inputs with invalid url link
   	Then It should show Should be a valid url message
