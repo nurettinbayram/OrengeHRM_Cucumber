@@ -58,6 +58,17 @@ public class AddQualificationsPageElements {
 
 	@FindBy(xpath = "(//list)[1]//tr[1]//td[2]//span")
 	public WebElement workTableCompanyElement;
+	
+	@FindBy(id = "from_date")
+	public WebElement fromDateInputElement;
+	
+	@FindBy(id = "to_date")
+	public WebElement toDateInputElement;
+	
+	@FindBy(xpath = "(//list[@listdata='listData'])[1]")
+	public WebElement workExpListElement;
+	
+	
 
 	// --------------------------EDUCATION--------------------------
 	@FindBy(xpath = "//ul[@id='additem-options-dropdown-qualifications']//a[text()='Education']")
@@ -104,7 +115,16 @@ public class AddQualificationsPageElements {
 	
 	@FindBy(xpath = "(//list)[2]//tr[1]//td[2]//span")
 	public WebElement educationTableElement;
+	
+	@FindBy(id = "startDate")
+	public WebElement eduStartDatElement;
 
+	@FindBy(id = "endDate")
+	public WebElement eduEndDatElement;
+	
+	@FindBy(xpath = "(//list[@listdata='listData'])[2]")
+	public WebElement educationListElement;
+	
 	//-------------------------------------SKILL-------------------------------------
 	@FindBy(xpath = "//ul[@id='additem-options-dropdown-qualifications']//a[text()='Skill']")
 	public WebElement skillLinkElement;
@@ -120,6 +140,9 @@ public class AddQualificationsPageElements {
 	
 	@FindBy(xpath = "(//list)[3]//tr[1]//td[2]//span")
 	public WebElement skillTableElement;
+	
+	@FindBy(xpath = "(//list[@listdata='listData'])[3]")
+	public WebElement skillsListElement;
 	
 	//-------------------------------Landuage-----------------------------
 	
