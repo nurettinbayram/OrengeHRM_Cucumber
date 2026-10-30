@@ -1,4 +1,4 @@
-@addQualifications @regresion
+@addQualifications @regression
 Feature: Add Qualifications Deatails Using Data Table
 
 	Background:
