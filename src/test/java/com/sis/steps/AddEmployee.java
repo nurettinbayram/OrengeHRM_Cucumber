@@ -17,6 +17,7 @@ public class AddEmployee extends CommonMethods{
 	public void login_with_admin_credential() {
 	    LoginPageFunctionality.loginFunction();
 	}
+
 	@When("Navigate to PIM and Add Employee page")
 	public void navigate_to_pim_and_add_employee_page() {
 	    waitForVisibility(dashbordPageElements.accountNamElement);
