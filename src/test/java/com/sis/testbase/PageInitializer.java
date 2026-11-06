@@ -1,18 +1,6 @@
 package com.sis.testbase;
 
-import com.sis.pages.AddContactDetailsPageElements;
-import com.sis.pages.AddDependencyPageElements;
-import com.sis.pages.AddEmergencyContactsPageElements;
-import com.sis.pages.AddEmployeePageElements;
-import com.sis.pages.AddImmigrationDetailsPageElement;
-import com.sis.pages.AddReportToDetailsPageElements;
-import com.sis.pages.AddSocialMediaDetailsPage;
-import com.sis.pages.AddWorkWeekDetailsPageElements;
-import com.sis.pages.DashbordPageElements;
-import com.sis.pages.EmployeeListPageElements;
-import com.sis.pages.LoginPageElements;
-import com.sis.pages.PersonalDetailsPageElements;
-import com.sis.pages.AddQualificationsPageElements;
+import com.sis.pages.*;
 
 public class PageInitializer extends BaseClass {
 
@@ -29,6 +17,8 @@ public class PageInitializer extends BaseClass {
 	public static AddWorkWeekDetailsPageElements addWorkWeekDetailsPageElements;
 	public static AddReportToDetailsPageElements addReportToDetailsPageElements;
 	public static AddQualificationsPageElements addQualificationsPageElements;
+	public static AddMembershipPageElements addMembershipPageElements;
+	public static CreateDisciplinaryCasePageElements createDisciplinaryCasePageElements;
 	
 	
 	
@@ -47,6 +37,8 @@ public class PageInitializer extends BaseClass {
 		addWorkWeekDetailsPageElements = new AddWorkWeekDetailsPageElements();
 		addReportToDetailsPageElements = new AddReportToDetailsPageElements();
 		addQualificationsPageElements = new AddQualificationsPageElements();
+		addMembershipPageElements = new AddMembershipPageElements();
+		createDisciplinaryCasePageElements = new CreateDisciplinaryCasePageElements();
 		
 	}
 

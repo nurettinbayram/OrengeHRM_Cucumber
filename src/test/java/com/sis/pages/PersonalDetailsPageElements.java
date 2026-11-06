@@ -106,7 +106,10 @@ public class PersonalDetailsPageElements {
 	
 	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Qualifications']")
 	public WebElement qualificationLinkElement;
-	
+
+	@FindBy(xpath = "//ul[@id='top-menu-overflow']//span[text()='Memberships']")
+	public WebElement membershipsLinkElement;
+
 	
 	
 	
